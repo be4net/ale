@@ -68,7 +68,7 @@ function! ale#virtualtext#ShowCursorWarning(...) abort
 
     let l:buffer = bufnr('')
 
-    if mode(1) isnot# 'n'
+    if mode(1) isnot# 'n' && mode(1) isnot# 'i'
         return
     endif
 
@@ -110,7 +110,7 @@ function! ale#virtualtext#ShowCursorWarningWithDelay() abort
         return
     endif
 
-    if mode(1) isnot# 'n'
+    if mode(1) isnot# 'n' && mode(1) isnot# 'i'
         return
     endif
 
